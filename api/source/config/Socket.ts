@@ -1,10 +1,13 @@
 import socketio from "socket.io";
-import http from 'http';
 
 interface ISocket {
    io: socketio.Server;
-   
+   developers: Map<number, string>;
+   agencies: Map<number, string>;
+
    setup(): void;
+   emitToDeveloper(id_dev: number): void;
+   emitToAgency(id_agency: number): void;
 }
 
 export default ISocket;

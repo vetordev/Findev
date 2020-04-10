@@ -22,7 +22,7 @@ npx ts-jest config:init
 
 
 ### NOTES
-`JOIN`  
+`JOIN - SEQUELIZE`  
 **through** => sempre se refere a tabela que tem a relação N<=>N, inclusive lidando com os atributos das tabelas  
 **Model: User, as: name (or) associantion: name** => inclui o join   
 
@@ -45,6 +45,14 @@ sequelize db:seed:all
 `reverter seed especifica - reverter todas`  
 sequelize db:seed:undo --seed name_seed **-** sequelize db:seed:undo:all  
 [https://sequelize.org/v5/manual/migrations.html]  
+
+`SOCKET.IO`
+Para emitir e ouvir mensagens (que não sejam as padrões), é necessário que esteja dentro de um evento de conexão. Isso só não é válido se eu emitir para um socket especifico (io.to(id))  
+**io.emit()** -> emite a todos os sockets (tem que estar dentro de um evento de conexão)
+**socket.broadcast.emit** -> todos menos esse soquete especifico
+**this.io.to(socket.id)** -> emite a um socket especifico
+**socket.emit()** -> emite apenas para esse socket
+-- ISSO É PARA SERVIDOR --
 
 ---
 
