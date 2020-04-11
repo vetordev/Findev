@@ -1,4 +1,4 @@
-# FINDEV
+![Logo](./web/src/assets/logos/black-logo128.png)  
 
 ## O que é?
 Plataforma digital construída com o propósito de facilitar as relações de negócio entre os desenvolvedores e agências.
