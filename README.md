@@ -1,9 +1,11 @@
-# FINDEV
 
-## O que é?
+<h1 align="center">
+   <img src="./web/src/assets/logos/black-logo128.png">
+</h1>
+
 Plataforma digital construída com o propósito de facilitar as relações de negócio entre os desenvolvedores e agências.
 
-## Como foi construído?
+## :computer: Desenvolvimento 
 A plataforma conta com dois sistemas que conversam entre sí, o `WEB` e `MOBILE` (ambos descrito abaixo) e consomem de uma `API` em comum.  
 `WEB` - Escrito em Javascript e com React JS ...  
 `MOBILE` - Escrito com Javascript com React Native ...  
@@ -16,6 +18,8 @@ A plataforma conta com dois sistemas que conversam entre sí, o `WEB` e `MOBILE`
 - Banco de dados em SQLite 3
 - Sucrase para transpilação do Typescript para o Javascript
 
-## Sistemas
+### Sistemas
 - **(WEB)**: Focado nas agências, permitindo a elas divulgar seus projetos e procurar/contratar novos desenvolvedores.  
 - **(MOBILE)**: Focado em desenvolvedores, permitindo que eles visualizem os projetos das agências e demonstre interesse em participar.  
+
+
