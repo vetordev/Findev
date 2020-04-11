@@ -18,6 +18,4 @@ A plataforma conta com dois sistemas que conversam entre sí, o `WEB` e `MOBILE`
 
 ## Sistemas
 - **(WEB)**: Focado nas agências, permitindo a elas divulgar seus projetos e procurar/contratar novos desenvolvedores.  
-   Desenvolvido com React JS
 - **(MOBILE)**: Focado em desenvolvedores, permitindo que eles visualizem os projetos das agências e demonstre interesse em participar.  
-   Desenvolvido com React Native
