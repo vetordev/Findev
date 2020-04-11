@@ -22,7 +22,7 @@ class Socket implements ISocket {
          //Insere o id_dev da base de dados como chave para o seu socket.id
          socket.on('new developer', (id_dev: number) => {
             this.developers.set(id_dev, socket.id);
-            this.emitToDeveloper(56)
+            this.emitToDeveloper(56, 'hi dev')
          });
          //Insere o id_agency da base de dados como chave para o seu socket.id
          socket.on('new agency', (id_agency: number) => {
@@ -34,24 +34,20 @@ class Socket implements ISocket {
       
    }
 
-   emitToDeveloper(id_dev: number){
+   emitToDeveloper(id_dev: number, message: string){
       const to = this.developers.get(id_dev);
       if(to === undefined)
          return false;
       
-      this.io.to(to).emit('warning', {
-         message: '...'
-      });
+      this.io.to(to).emit('warning', message);
    }
 
-   emitToAgency(id_agency: number){
+   emitToAgency(id_agency: number, message: string){
       const to = this.agencies.get(id_agency);
       if(to === undefined)
          return false;
       
-      this.io.to(to).emit('warning', {
-         message: '...'
-      });
+      this.io.to(to).emit('warning', message)
    }
 }
 

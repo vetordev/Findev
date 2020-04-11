@@ -1,60 +1,23 @@
-# EXPRESS+SEQUELIZE+TYPESCRIPT
+# FINDEV
 
-### Comandos
-**SEQUELIZE**  
-`iniciar sequelize`  
-sequelize init  
-`criar seed`  
-sequelize-cli seed:generate --name demo-user  
-`criar migration`  
-sequelize-cli migration:generate --name migration-skeleton  
+## O que é?
+Plataforma digital construída com o propósito de facilitar as relações de negócio entre os desenvolvedores e agências.
 
-**TYPESCRIPT**  
-`iniciar typescript`  
-tsc --init  
+## Como foi construído?
+A plataforma conta com dois sistemas que conversam entre sí, o `WEB` e `MOBILE` (ambos descrito abaixo) e consomem de uma `API` em comum.  
+`WEB` - Escrito em Javascript e com React JS ...  
+`MOBILE` - Escrito com Javascript com React Native ...  
+`API` - Escrito em Typescript juntamente ao Node.js com as libs:
+- Express para requisições HTTP
+- Sequelize para manipulação do banco de dados
+- Socket.io para uso do websocket
+- Jest para testes da aplicação
+- Celebrate e Joi para validações
+- Banco de dados em SQLite 3
+- Sucrase para transpilação do Typescript para o Javascript
 
-`compilar arquivos typescript`  
-ts-node-dev --respawn --transpileOnly xxx.ts  
-
-**JEST**  
-`iniciar jest`  
-npx ts-jest config:init  
-
-
-### NOTES
-`JOIN - SEQUELIZE`  
-**through** => sempre se refere a tabela que tem a relação N<=>N, inclusive lidando com os atributos das tabelas  
-**Model: User, as: name (or) associantion: name** => inclui o join   
-
-**User.belongsTo(Project)** => target se refere a project e source a User, a fk e criada em User  
-**Project.hasMany(User)** => target se refere a User e source Project, a fk é criada em User  
-foreign key/ defini o nome do campo, por padrão a chave de referencia sera a primária, caso queira mudar, use source/target  
-[https://sequelize.org/v5/manual/associations.html]  
-
-`criar migration`  
-sequelize migration:generate --name name_migration  
-`executar migration`  
-sequelize db:migrate  
-`revertar migration - reverter todas`  
-sequelize db:migrate:undo **-** sequelize db:migrate:undo:all  
-
-`criar seed`  
-sequelize seed:generate --name name_seed  
-`executar seed`  
-sequelize db:seed:all  
-`reverter seed especifica - reverter todas`  
-sequelize db:seed:undo --seed name_seed **-** sequelize db:seed:undo:all  
-[https://sequelize.org/v5/manual/migrations.html]  
-
-`SOCKET.IO`
-Para emitir e ouvir mensagens (que não sejam as padrões), é necessário que esteja dentro de um evento de conexão. Isso só não é válido se eu emitir para um socket especifico (io.to(id))  
-**io.emit()** -> emite a todos os sockets (tem que estar dentro de um evento de conexão)
-**socket.broadcast.emit** -> todos menos esse soquete especifico
-**this.io.to(socket.id)** -> emite a um socket especifico
-**socket.emit()** -> emite apenas para esse socket
--- ISSO É PARA SERVIDOR --
-
----
-
-
-yarn sequelize db:seed:undo:all; yarn sequelize db:migrate; yarn sequelize db:seed:all; yarn jest --no-cache
+## Sistemas
+- **(WEB)**: Focado nas agências, permitindo a elas divulgar seus projetos e procurar/contratar novos desenvolvedores.  
+   Desenvolvido com React JS
+- **(MOBILE)**: Focado em desenvolvedores, permitindo que eles visualizem os projetos das agências e demonstre interesse em participar.  
+   Desenvolvido com React Native

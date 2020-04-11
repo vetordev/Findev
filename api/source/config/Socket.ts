@@ -6,8 +6,8 @@ interface ISocket {
    agencies: Map<number, string>;
 
    setup(): void;
-   emitToDeveloper(id_dev: number): void;
-   emitToAgency(id_agency: number): void;
+   emitToDeveloper(id_dev: number, message: string): void;
+   emitToAgency(id_agency: number, message: string): void;
 }
 
 export default ISocket;
