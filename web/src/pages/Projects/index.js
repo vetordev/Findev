@@ -4,7 +4,7 @@ import Header from '../../components/Header';
 
 import { Container, Cards, Card } from './styles';
 
-import logo from '../../assets/rocketseat-logo.png'
+import img_agency from '../../assets/rocketseat-logo.png';
 
 const perfil = 'https://api.adorable.io/avatars/285/abott@adorable.png';
 
@@ -16,7 +16,7 @@ export default function Projects() {
           <Cards>
             <Card>
               <div className="header">
-                <img src={logo} alt=""/>
+                <img src={img_agency} alt=""/>
                 <div className="header-text">
                   <h1>Bootcamp GoStack</h1>
                   <p>Rocketseat</p>
@@ -36,7 +36,7 @@ export default function Projects() {
             </Card>
             <Card>
             <div className="header">
-                <img src={logo} alt=""/>
+                <img src={img_agency} alt=""/>
                 <div className="header-text">
                   <h1>Bootcamp GoStack</h1>
                   <p>Rocketseat</p>
@@ -56,7 +56,7 @@ export default function Projects() {
             </Card>
             <Card>
             <div className="header">
-                <img src={logo} alt=""/>
+                <img src={img_agency} alt=""/>
                 <div className="header-text">
                   <h1>Bootcamp GoStack</h1>
                   <p>Rocketseat</p>
@@ -76,7 +76,7 @@ export default function Projects() {
             </Card>
             <Card>
             <div className="header">
-                <img src={logo} alt=""/>
+                <img src={img_agency} alt=""/>
                 <div className="header-text">
                   <h1>Bootcamp GoStack</h1>
                   <p>Rocketseat</p>
@@ -96,7 +96,7 @@ export default function Projects() {
             </Card>
             <Card>
             <div className="header">
-                <img src={logo} alt=""/>
+                <img src={img_agency} alt=""/>
                 <div className="header-text">
                   <h1>Bootcamp GoStack</h1>
                   <p>Rocketseat</p>
@@ -116,7 +116,7 @@ export default function Projects() {
             </Card>
             <Card>
             <div className="header">
-                <img src={logo} alt=""/>
+                <img src={img_agency} alt=""/>
                 <div className="header-text">
                   <h1>Bootcamp GoStack</h1>
                   <p>Rocketseat</p>
@@ -136,7 +136,7 @@ export default function Projects() {
             </Card>
             <Card>
             <div className="header">
-                <img src={logo} alt=""/>
+                <img src={img_agency} alt=""/>
                 <div className="header-text">
                   <h1>Bootcamp GoStack</h1>
                   <p>Rocketseat</p>
