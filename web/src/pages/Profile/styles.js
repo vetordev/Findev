@@ -25,6 +25,7 @@ export const Agency = styled.div`
      display: flex;
      flex-direction: row;
      align-items: center;
+     margin-bottom: 50px;
 
      img {
           width: 120px;
@@ -66,10 +67,32 @@ export const Agency = styled.div`
 
 `;
 
-export const TitleSession = styled.h1``;
+export const TitleSession = styled.h1`
+     color: #333;
+     font-size: 28px;
+     margin-right: 10px;
+`;
+
+export const AddButton = styled.button`
+     cursor: pointer;
+     background: #86DFE9;
+     width: 35px;
+     height: 35px;
+     border: 0;
+     border-radius: 12px;
+     box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.16);
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+`;
 
 export const Projects = styled.div`
-
+     header {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+     }
 `;
 
 export const Devs = styled.div``;

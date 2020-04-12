@@ -1,8 +1,9 @@
 import React from 'react';
+import { FiPlus } from 'react-icons/fi';
 
 import Header from '../../components/Header';
 
-import { Container, Content, Agency, Projects, Devs, TitleSession } from './styles';
+import { Container, Content, Agency, Projects, Devs, TitleSession, AddButton } from './styles';
 
 import img_agency from '../../assets/rocketseat-logo.png';
 
@@ -23,6 +24,12 @@ export default function Profile() {
           </Agency>
 
           <Projects>
+            <header>
+              <TitleSession>Projetos</TitleSession>
+              <AddButton>
+                <FiPlus size={28} color="#fff" />
+              </AddButton>
+            </header>
           </Projects>
 
           <Devs></Devs>
