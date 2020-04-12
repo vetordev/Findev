@@ -35,7 +35,7 @@ export const Container = styled.div`
 
      input, button {
           width: 100%;
-          height: 50px;
+          height: 55px;
      }
 
      input:nth-child(2) {
@@ -47,6 +47,8 @@ export const Container = styled.div`
           border: 1px solid #999;
           border-radius: 6px;
           background: transparent;
+          font-size: 15px;
+          color: #444;
      }
 
      button {
@@ -59,6 +61,7 @@ export const Container = styled.div`
           font-weight: bold;
           letter-spacing: 2px;
           cursor: pointer;
+          font-size: 18px;
      }
 
 `;
