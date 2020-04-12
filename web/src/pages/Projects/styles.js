@@ -28,6 +28,12 @@ export const Card = styled.li`
      /* align-items: center; */
      flex-direction: column;
      justify-content: center;
+     transition: 0.21s;
+
+     :hover {
+          box-shadow: 0px 7px 10px 0 rgba(0, 0, 0, 0.16);
+          transform: scale(1.05);
+     }
 
      .header {
           display: flex;
