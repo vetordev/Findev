@@ -12,16 +12,16 @@ export default function Header({ page }) {
           
          <nav>
               <MenuFullScreen>
-                   <Session in={page === "projects" ? true : false}>
+                   <Session in={page === "projects" ? 'true' : 'false'}>
                         <StyledLink to="projects">Projetos</StyledLink>
                    </Session>
-                   <Session in={page === "solicitations" ? true : false}>
+                   <Session in={page === "solicitations" ? 'true' : 'false'}>
                          <StyledLink to="solicitations">Solicitações</StyledLink>
                    </Session>
-                   <Session in={page === "profile" ? true : false}>
+                   <Session in={page === "profile" ? 'true' : 'false'}>
                          <StyledLink to="profile">Minha empresa</StyledLink>
                    </Session>
-                   <Session in={page === "search" ? true : false}>
+                   <Session in={page === "search" ? 'true' : 'false'}>
                          <StyledLink to="search">
                               <FiSearch size={22} color="#222" />
                          </StyledLink>

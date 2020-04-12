@@ -34,7 +34,7 @@ export const Session = styled.li`
      font-weight: bold;
      font-size: 20px;
 
-     border-bottom: ${props => props.in ? '3px solid #222' : 'none' }
+     border-bottom: ${props => props.in === 'true' ? '3px solid #222' : 'none' }
 `;
 
 
