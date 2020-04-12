@@ -19,7 +19,7 @@ export default function Login() {
 
         <form>
           <input type="text" placeholder="Nome da empresa" />
-          <input type="text" placeholder="E-mail" />
+          <input type="email" placeholder="E-mail" />
 
           <button type="button" onClick={handleLogin} >Acessar</button>
         </form>

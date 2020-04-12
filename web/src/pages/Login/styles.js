@@ -42,14 +42,6 @@ export const Container = styled.div`
           margin-top: 10px;
      }
 
-     input {
-          padding: 0 15px;
-          border: 1px solid #ccc;
-          border-radius: 6px;
-          background: transparent;
-          font-size: 15px;
-     }
-
      button {
           margin-top: 30px;
           border: none;
@@ -58,9 +50,17 @@ export const Container = styled.div`
           color: #fff;
           text-transform: uppercase;
           font-weight: bold;
-          letter-spacing: 2px;
+          letter-spacing: 1px;
           cursor: pointer;
           font-size: 18px;
+     }
+
+
+     /* RESPONSIVIDADE */
+     @media (max-width: 490px) {
+          form {
+               padding: 60px 40px;
+          }
      }
 
 `;

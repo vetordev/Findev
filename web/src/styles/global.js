@@ -22,10 +22,17 @@ export default createGlobalStyle`
 
      input {
           font-family: 'Roboto', Arial, sans-serif;
-          /* font-weight: 500 */
      }
 
      ul {
           list-style: none;
+     }
+
+     input {
+          padding: 0 15px;
+          border: 1px solid #ccc;
+          border-radius: 6px;
+          background: transparent;
+          font-size: 15px;
      }
 `
