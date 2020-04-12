@@ -16,7 +16,8 @@ export const Container = styled.div`
      }
 
      img {
-          width: 190px;
+          width: 150px;
+          margin-bottom: 30px;
      }
 
      form {
@@ -50,7 +51,7 @@ export const Container = styled.div`
           color: #fff;
           text-transform: uppercase;
           font-weight: bold;
-          letter-spacing: 1px;
+          letter-spacing: 0.5px;
           cursor: pointer;
           font-size: 18px;
      }

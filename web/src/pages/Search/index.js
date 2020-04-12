@@ -1,9 +1,13 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import Header from '../../components/Header';
+
+import { Container } from './styles';
 
 export default function Search() {
   return (
-    <h1>Search</h1>
+      <Container>
+        <Header page="search" />
+      </Container>
   );
 }
