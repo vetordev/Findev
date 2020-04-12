@@ -6,7 +6,6 @@ import { Container } from './styles';
 import logo from '../../assets/logos/white-logo128.png';
 
 export default function Login() {
-
   const history = useHistory();
 
   function handleLogin() {

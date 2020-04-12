@@ -21,8 +21,8 @@ export default createGlobalStyle`
      }
 
      input {
-          font-family: 'Roboto', sans-serif;
-          font-weight: 500
+          font-family: 'Roboto', Arial, sans-serif;
+          /* font-weight: 500 */
      }
 
      ul {

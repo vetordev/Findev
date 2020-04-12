@@ -43,12 +43,11 @@ export const Container = styled.div`
      }
 
      input {
-          padding: 0 7px;
-          border: 1px solid #999;
+          padding: 0 15px;
+          border: 1px solid #ccc;
           border-radius: 6px;
           background: transparent;
           font-size: 15px;
-          color: #444;
      }
 
      button {
