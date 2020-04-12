@@ -24,7 +24,7 @@ export const Container = styled.div`
           width: 100%;
           max-width: 500px;
           height: 350px;
-          background: #F6F6F6;
+          background: #F5F5F5;
           border-radius: 10px;
           padding: 60px 80px;
 

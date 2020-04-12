@@ -11,6 +11,7 @@ export default function Header({ page }) {
     <Container>
          <img src={logo} alt=""/>
 
+          
          <nav>
               <ul>
                    <Session in={page == "projects" ? true : false}>
@@ -24,7 +25,7 @@ export default function Header({ page }) {
                    </Session>
                    <Session in={page == "search" ? true : false}>
                          <StyledLink to="search">
-                              <FiSearch size={24} color="#222" />
+                              <FiSearch size={22} color="#222" />
                          </StyledLink>
                    </Session>
               </ul>

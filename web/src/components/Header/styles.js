@@ -2,14 +2,17 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
-     height: 120px;
+     height: 150px;
 
      display: flex;
      align-items: center;
 
      img {
           width: 120px;
-          margin-left: 40px;
+          margin: 20px 0 0 40px;
+          position: absolute;
+          left: 0;
+          top: 0;
      }
 
      nav {
@@ -26,16 +29,10 @@ export const Container = styled.div`
 export const Session = styled.li`
      
      cursor: pointer;
-     margin: 24px;
-     padding: 5px;
+     margin: 30px;
+     padding: 2px;
      font-weight: bold;
      font-size: 20px;
-
-     display: flex;
-     justify-content: center;
-     flex-direction: column;
-     align-items: flex-end;
-
 
      border-bottom: ${props => props.in ? '3px solid #222' : 'none' }
 `;
