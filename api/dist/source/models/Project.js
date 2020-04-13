@@ -14,7 +14,7 @@ class Project extends sequelize_1.Model {
                 allowNull: false
             },
             description: {
-                type: sequelize_1.DataTypes.TEXT,
+                type: new sequelize_1.DataTypes.STRING(150),
                 allowNull: false
             },
             id_agency: {
@@ -24,10 +24,18 @@ class Project extends sequelize_1.Model {
                     key: 'id_agency'
                 },
                 allowNull: false
+            },
+            github: {
+                type: sequelize_1.DataTypes.STRING,
+                allowNull: false,
+                validate: {
+                    isUrl: true
+                }
             }
         }, {
             sequelize,
             modelName: 'project',
+            tableName: 'project',
             freezeTableName: true
         });
     }

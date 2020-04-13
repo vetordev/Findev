@@ -24,18 +24,29 @@ class Hiring extends sequelize_1.Model {
                 },
                 allowNull: false
             },
+            position: {
+                type: sequelize_1.DataTypes.STRING,
+                allowNull: false
+            },
             date_hiring: {
                 type: sequelize_1.DataTypes.DATEONLY,
-                allowNull: false
+                allowNull: false,
+                validate: {
+                    isDate: true
+                }
             },
             date_resignation: {
                 type: sequelize_1.DataTypes.DATEONLY,
                 allowNull: true,
-                defaultValue: '9999-01-01'
+                defaultValue: '9999-01-01',
+                validate: {
+                    isDate: true
+                }
             }
         }, {
             sequelize,
             modelName: 'hiring',
+            tableName: 'hiring',
             freezeTableName: true
         });
     }
