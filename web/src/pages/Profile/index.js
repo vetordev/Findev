@@ -17,7 +17,7 @@ export default function Profile() {
       <Container>
         <Content>
           <Logout>
-            <FiPower size={20} />
+            <StyledLink to="/"><FiPower size={20} /></StyledLink>
           </Logout>
           <Agency>
             <img src={img_agency} alt=""/>
