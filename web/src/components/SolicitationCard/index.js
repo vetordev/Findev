@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, DevSkills, Button, CardsContainer, Card } from './styles';
+import { DevSkills, Button, Card } from './styles';
 
 const perfil = 'https://api.adorable.io/avatars/285/abott@adorable.png';
 

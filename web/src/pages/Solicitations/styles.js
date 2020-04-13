@@ -5,9 +5,17 @@ export const Container = styled.div`
      justify-content: center;
      align-items: center;
      flex-direction: column;
-     padding: 0 150px 50px 150px;
+     padding: 0 200px 50px;
 
-     @media (max-width: 718px) {
+     @media (max-width: 1300px) {
+          padding: 0 75px;
+     }
+
+     @media (max-width: 1150px) {
+          padding: 0 37px;
+     }
+
+     @media (max-width: 1060px) {
           padding: 0;
      }
 `;
@@ -22,7 +30,8 @@ export const Sessions = styled.div`
 
      div {
           cursor: pointer;
-          height: 50px;
+          /* height: 50px; */
+          padding: 10px 0;
           width: 30%;
           border-radius: 12px 12px 0 0;
           margin: 0 50px;
@@ -43,5 +52,12 @@ export const Sessions = styled.div`
      div#disabled {
           background: rgba(0, 0, 0, 0.1);
           color: rgba(255, 255, 255, 0.6);
+     }
+
+     @media (max-width: 500px) {
+          div {
+               margin: 0 20px;
+               font-size: 15px;
+          }
      }
 `;
