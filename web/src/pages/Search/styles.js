@@ -7,8 +7,20 @@ export const Container = styled.div`
      flex-direction: column;
      padding: 0 300px 50px 300px;
 
-     @media (max-width: 1000px) {
-          padding: 0 10px;
+     @media (max-width: 1600px) {
+          padding: 0 150px;
+     }
+
+     @media (max-width: 1300px) {
+          padding: 0 75px;
+     }
+
+     @media (max-width: 1150px) {
+          padding: 0 37px;
+     }
+
+     @media (max-width: 1060px) {
+          padding: 0;
      }
 `;
 
@@ -18,6 +30,14 @@ export const Content = styled.div`
      background: #fff;
      padding: 60px;
      box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+
+     @media (max-width: 460px) {
+          padding: 20px 10px;
+     }
+
+     @media (max-width: 360px) {
+          padding: 20px 0;
+     }
 `;
 
 export const SearchBar = styled.div`

@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+
+     font-size: 10px;
+
      ul {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
           grid-gap: 35px;
      }
 
@@ -12,10 +15,10 @@ export const Container = styled.div`
           flex-grow: 0;
           justify-content: center;
           background: #fff;
-          height: 150px;
+          height: auto;
           border-radius: 15px;
           box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.16);
-          padding: 10px 20px;
+          padding: 15px 20px;
 
           display: flex;
           align-items: center;
@@ -31,7 +34,7 @@ export const Container = styled.div`
      li div.content p.devName {
           font-weight: bold;
           margin-bottom: 5px;
-          font-size: 20px;
+          font-size: 2em;
           color: rgba(0, 0, 0, 0.7);
      }
 
@@ -42,12 +45,25 @@ export const Container = styled.div`
 
           /* width: 100%; */
      }
+
+     @media (max-width: 360px) {
+          li div.content p.devName {
+               font-size: 1.7em;
+               text-align: center; 
+          }
+
+          li div.img img {
+               width: 80px;
+               margin-right: 10px;
+          }
+     }
 `;
 
 export const DevSkills = styled.div`
      display: flex;
      /* font-weight: bold; */
      margin-bottom: 15px;
+     font-size: 1.3em;
 
      p {
           color: rgba(0, 0, 0, 0.3);
@@ -57,11 +73,19 @@ export const DevSkills = styled.div`
      span {
           color: #86DFE9;
      }
+
+     @media (max-width: 360px) {
+          flex-direction: column;
+          
+          p {
+               margin-bottom: 5px;
+          }
+     }
 `;
 
 export const Button = styled.button`
      cursor: pointer;
-     width: 190px;
+     width: 90%;
      height: 35px;
      border: 2px solid #86DFE9;
      background: transparent;
@@ -70,7 +94,7 @@ export const Button = styled.button`
      text-transform: uppercase;
      font-weight: bold !important;
      color: rgba(0, 0, 0, 0.6);
-     font-size: 11px;
+     font-size: 1em;
      transition: 0.2s;
 
      :hover {

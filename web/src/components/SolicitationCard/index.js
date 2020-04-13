@@ -27,7 +27,7 @@ export default function SolicitationCard() {
                         </div>
                    </div>
               </li>
-              <li>
+              {/* <li>
                    <div className="img">
                         <img src={perfil} alt=""/>
                    </div>
@@ -45,7 +45,7 @@ export default function SolicitationCard() {
                               </Button>
                         </div>
                    </div>
-              </li>
+              </li> */}
          </ul>
     </Container>
   );
