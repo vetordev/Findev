@@ -13,7 +13,7 @@ const perfil = 'https://api.adorable.io/avatars/285/abott@adorable.png';
 export default function Profile() {
   return (
     <>
-      {/* <Header page="profile" /> */}
+      <Header page="profile" />
       <Container>
         <Content>
           <Agency>
