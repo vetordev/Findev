@@ -15,10 +15,18 @@ class Agency extends Model {
          name_agency: {
             type: DataTypes.STRING,
             allowNull: false
-         }
+         },
+         email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+               isEmail: true
+            }
+          }
       }, {
          sequelize,
          modelName: 'agency',
+         tableName: 'agency',
          freezeTableName: true
       });
    }

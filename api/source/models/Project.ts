@@ -5,11 +5,12 @@ class Project extends Model {
    public name_project !: string;
    public description !: string;
    public id_agency !: number;
+   public github !: string;
 
    static start(sequelize){
       this.init({
          id_project:{
-            type: DataTypes.INTEGER ,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
           },
@@ -18,7 +19,7 @@ class Project extends Model {
             allowNull: false
           },
           description: {
-            type: DataTypes.TEXT,
+            type: new DataTypes.STRING(150),
             allowNull: false
           },
           id_agency: {
@@ -28,10 +29,18 @@ class Project extends Model {
               key: 'id_agency'
             },
             allowNull: false
+          },
+          github: {
+             type: DataTypes.STRING,
+             allowNull: false,
+             validate: {
+                isUrl: true
+             }
           }
       }, {
          sequelize,
          modelName: 'project',
+         tableName: 'project',
          freezeTableName: true
       });
    }

@@ -4,6 +4,7 @@ class Hiring extends Model {
    public id_hiring !: number;
    public id_dev !: number;
    public id_agency !: number;
+   public position !: string;
    public date_hiring !: string;
    public date_resignation !: string;
 
@@ -29,19 +30,30 @@ class Hiring extends Model {
             },
             allowNull: false
          },
+         position: {
+            type: DataTypes.STRING,
+            allowNull: false
+         },
          date_hiring: {
             type: DataTypes.DATEONLY,
-            allowNull: false
+            allowNull: false,
+            validate: {
+               isDate: true
+            }
          }, 
          date_resignation: {
             type: DataTypes.DATEONLY,
             allowNull: true,
-            defaultValue: '9999-01-01'
+            defaultValue: '9999-01-01',
+            validate: {
+               isDate: true
+            }
          }   
          
       }, {
          sequelize,
          modelName: 'hiring',
+         tableName: 'hiring',
          freezeTableName: true
       });
    }

@@ -14,7 +14,7 @@ module.exports = {
         allowNull: false
       },
       description: {
-        type: Sequelize.TEXT,
+        type: Sequelize.STRING(150),
         allowNull: false
       },
       id_agency: {
@@ -24,6 +24,10 @@ module.exports = {
           key: 'id_agency'
         },
         allowNull: false
+      },
+      github: {
+        type: Sequelize.STRING,
+        allowNull: false,
       }
     });
     

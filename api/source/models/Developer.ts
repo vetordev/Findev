@@ -4,8 +4,8 @@ class Developer extends Model {
    public id_dev !: number;
    public name_dev !: string;
    public born_in !: string;
-   public position !: string;
    public skill !: string;
+   public github !: string;
 
    static start(sequelize: Sequelize){
       this.init({
@@ -20,19 +20,26 @@ class Developer extends Model {
          },
          born_in: {
             type: DataTypes.DATEONLY,
-            allowNull: false
-         },
-         position: {
-            type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            validate: {
+               isDate: true
+            }
          },
          skill: {
             type: DataTypes.STRING,
             allowNull: false
+         },
+         github: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+               isUrl: true
+            }
          }
       }, {
          sequelize,
          modelName: 'developer',
+         tableName: 'developer',
          freezeTableName: true
       })
    }

@@ -5,14 +5,19 @@ module.exports = {
     return await queryInterface.bulkInsert('Agency', [
       {
         name_agency: 'High Devs',
+        email: 'highdevs@gmail.com'
       }, {
-        name_agency: 'RocketSeat'
+        name_agency: 'RocketSeat',
+        email: 'rocketseat@gmail.com'
       }, {
-        name_agency: 'You Matter'
+        name_agency: 'You Matter',
+        email: 'youmatter@gmail.com'
       }, {
-        name_agency: 'Reduxios'
+        name_agency: 'Reduxios',
+        email: 'reduxios@gmail.com'
       }, {
-        name_agency: 'Jesters'
+        name_agency: 'Jesters',
+        email: 'jesters@gmail.com'
       }
     ], {});
     
