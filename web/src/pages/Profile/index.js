@@ -13,7 +13,7 @@ const perfil = 'https://api.adorable.io/avatars/285/abott@adorable.png';
 export default function Profile() {
   return (
     <>
-      <Header page="profile" />
+      {/* <Header page="profile" /> */}
       <Container>
         <Content>
           <Agency>
@@ -95,36 +95,37 @@ export default function Profile() {
               </StyledLink>
             </HeaderSession>
 
-            <ul>
-              <li>
-                <img src={perfil} alt=""/>
-              </li>
-              <li>
-                <img src={perfil} alt=""/>
-              </li>
-              <li>
-                <img src={perfil} alt=""/>
-              </li>
-              <li>
-                <img src={perfil} alt=""/>
-              </li>
-              <li>
-                <img src={perfil} alt=""/>
-              </li>
-              <li>
-                <img src={perfil} alt=""/>
-              </li>
-              <li>
-                <img src={perfil} alt=""/>
-              </li>
-              <li>
-                <img src={perfil} alt=""/>
-              </li>
-              <li>
-                <img src={perfil} alt=""/>
-              </li>
-              
-            </ul>
+            <div className="ul">
+              <ul>
+                <li>
+                  <img src={perfil} alt=""/>
+                </li>
+                <li>
+                  <img src={perfil} alt=""/>
+                </li>
+                <li>
+                  <img src={perfil} alt=""/>
+                </li>
+                <li>
+                  <img src={perfil} alt=""/>
+                </li>
+                <li>
+                  <img src={perfil} alt=""/>
+                </li>
+                <li>
+                  <img src={perfil} alt=""/>
+                </li>
+                <li>
+                  <img src={perfil} alt=""/>
+                </li>
+                <li>
+                  <img src={perfil} alt=""/>
+                </li>
+                <li>
+                  <img src={perfil} alt=""/>
+                </li>
+              </ul>
+            </div>
           </Devs>
         </Content>
       </Container>

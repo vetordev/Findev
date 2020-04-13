@@ -4,21 +4,25 @@ export const Container = styled.div`
      display: flex;
      justify-content: center;
      align-items: center;
-     padding: 0 150px 50px;
+     padding: 0 150px 50px 150px;
 
      @media (max-width: 718px) {
-          padding: 0 50px 50px;
+          padding: 0;
      }
 `;
 
 export const Content = styled.div`
-     width: 100%;
+     /* width: 100%; */
      height: auto;
-     padding: 60px 70px;
+     padding: 50px 60px;
 
      background: #fff;
      box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
      border-radius: 10px;
+
+     @media (max-width: 1075px) {
+          padding: 50px 10px;
+     }
 `;
 
 export const Agency = styled.div`
@@ -55,15 +59,18 @@ export const Agency = styled.div`
           border-bottom: 1px solid #999;
      }
 
-     @media (max-width: 650px) {
+     @media (max-width: 535px) {
           flex-direction: column;
-          
+
           div#infos-agency {
-               margin-top: 20px;
-               text-align: center
+               text-align: center;
+          }
+
+          img {
+               margin-right: 0;
+               margin-bottom: 20px;
           }
      }
-
 `;
 
 export const TitleSession = styled.h1`
@@ -93,9 +100,11 @@ export const HeaderSession = styled.div`
 
      margin-bottom: 20px;
      margin-top: 50px;
+     max-width: 100%;
 `;
 
 export const Projects = styled.div`
+
      ul {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -108,6 +117,7 @@ export const Projects = styled.div`
           box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.16);
           border-radius: 10px;
           padding: 20px 30px;
+          max-width: 100% !important;
      }
 
      ul li div.content {
@@ -135,6 +145,7 @@ export const Projects = styled.div`
 `;
 
 export const Devs = styled.div`
+
      ul {
           display: grid;
           grid-template-columns: repeat(auto-fit, min(80px));
