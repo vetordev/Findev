@@ -87,11 +87,45 @@ export const AddButton = styled.button`
      align-items: center;
 `;
 
+export const HeaderSession = styled.div`
+     display: flex;
+     align-items: center;
+     flex-direction: row;
+
+     margin-bottom: 20px;
+`;
+
 export const Projects = styled.div`
-     header {
+     ul {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          grid-gap: 30px;
+     }
+
+     ul li {
           display: flex;
-          align-items: center;
           flex-direction: row;
+          box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.16);
+          border-radius: 10px;
+          padding: 20px 30px;
+     }
+
+     ul li div.content h3 {
+          font-size: 18px;
+          margin-bottom: 12px;
+     } 
+
+     ul li div.content p {
+          color: rgba(0, 0, 0, 0.45);
+          line-height: 20px;
+          font-size: 15px;
+     }
+
+     ul li div.icons {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          padding: 30px 0;
      }
 `;
 

@@ -1,9 +1,10 @@
 import React from 'react';
-import { FiPlus } from 'react-icons/fi';
+import { FiPlus, FiTrash2, FiEdit } from 'react-icons/fi';
 
 import Header from '../../components/Header';
+import GitHubLink from '../../components/GitHubLink';
 
-import { Container, Content, Agency, Projects, Devs, TitleSession, AddButton } from './styles';
+import { Container, Content, Agency, Projects, Devs, TitleSession, AddButton, HeaderSession } from './styles';
 
 import img_agency from '../../assets/rocketseat-logo.png';
 
@@ -24,12 +25,48 @@ export default function Profile() {
           </Agency>
 
           <Projects>
-            <header>
+            <HeaderSession>
               <TitleSession>Projetos</TitleSession>
               <AddButton>
                 <FiPlus size={28} color="#fff" />
               </AddButton>
-            </header>
+            </HeaderSession>
+
+            <ul>
+              <li>
+                <div className="content">
+                  <h3>Bootcamp GoStack</h3>
+                  <p className="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry, has been the industry's standard dummy text ever since the 1500s.</p>
+                  <GitHubLink iconSize={20} fontSize={16} />
+                </div>
+                <div className="icons">
+                  <FiEdit size={24} color="rgba(0, 0, 0, 0.45)" />
+                  <FiTrash2 size={24} color="rgba(0, 0, 0, 0.45)" />
+                </div>
+              </li>
+
+              <li>
+                <div className="content">
+                  <h3>Bootcamp GoStack</h3>
+                  <p className="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry, has been the industry's standard dummy text ever since the 1500s.</p>
+                </div>
+                <div className="icons">
+                  <FiEdit size={24} color="rgba(0, 0, 0, 0.45)" />
+                  <FiTrash2 size={24} color="rgba(0, 0, 0, 0.45)" />
+                </div>
+              </li>
+
+              <li>
+                <div className="content">
+                  <h3>Bootcamp GoStack</h3>
+                  <p className="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry, has been the industry's standard dummy text ever since the 1500s.</p>
+                </div>
+                <div className="icons">
+                  <FiEdit size={24} color="rgba(0, 0, 0, 0.45)" />
+                  <FiTrash2 size={24} color="rgba(0, 0, 0, 0.45)" />
+                </div>
+              </li>
+            </ul>
           </Projects>
 
           <Devs></Devs>
