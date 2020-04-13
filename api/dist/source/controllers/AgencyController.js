@@ -28,10 +28,10 @@ class AgencyController {
     }
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { name_agency, email } = req.body;
+            const { name_agency } = req.body;
             try {
                 const agency = yield Agency_1.default.create({
-                    name_agency, email
+                    name_agency
                 });
                 return res.json(agency);
             }
@@ -48,7 +48,7 @@ class AgencyController {
                 const agencies_hiring = yield Agency_1.default.findByPk(id_agency, {
                     include: [{
                             association: 'Developers',
-                            attributes: ['name_dev', 'github', 'skill'],
+                            attributes: ['name_dev', 'position', 'skill'],
                             through: {
                                 attributes: ['date_hiring', 'date_resignation']
                             }

@@ -15,26 +15,19 @@ class Developer extends sequelize_1.Model {
             },
             born_in: {
                 type: sequelize_1.DataTypes.DATEONLY,
-                allowNull: false,
-                validate: {
-                    isDate: true
-                }
+                allowNull: false
+            },
+            position: {
+                type: sequelize_1.DataTypes.STRING,
+                allowNull: false
             },
             skill: {
                 type: sequelize_1.DataTypes.STRING,
                 allowNull: false
-            },
-            github: {
-                type: sequelize_1.DataTypes.STRING,
-                allowNull: false,
-                validate: {
-                    isUrl: true
-                }
             }
         }, {
             sequelize,
             modelName: 'developer',
-            tableName: 'developer',
             freezeTableName: true
         });
     }

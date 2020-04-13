@@ -16,11 +16,11 @@ class AgencyController implements IController{
 
    }
    async create(req: Request, res: Response): Promise<Response> {
-      const { name_agency, email } = req.body;
+      const { name_agency } = req.body;
       
       try {
          const agency = await Agency.create({
-            name_agency, email
+            name_agency
          });
 
          return res.json(agency);
@@ -36,7 +36,7 @@ class AgencyController implements IController{
          const agencies_hiring = await Agency.findByPk(id_agency, {
             include : [{
                association: 'Developers',
-               attributes: ['name_dev', 'github', 'skill'],
+               attributes: ['name_dev', 'position', 'skill'],
                through: {
                   attributes: ['date_hiring', 'date_resignation']
                }

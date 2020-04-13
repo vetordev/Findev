@@ -28,10 +28,10 @@ class DevController {
     }
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { name_dev, born_in, skill, github } = req.body;
+            const { name_dev, born_in, position, skill } = req.body;
             try {
                 const dev = yield Developer_1.default.create({
-                    name_dev, born_in, skill, github
+                    name_dev, born_in, position, skill
                 });
                 return res.json(dev);
             }

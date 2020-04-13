@@ -21,12 +21,12 @@ class ProjectController implements IController{
 
    }
    async create(req: Request, res: Response): Promise<Response> {
-      const { name_project, description, id_agency, github } = req.body;
+      const { name_project, description, id_agency } = req.body;
 
       try {
          
          const project = await Project.create({
-            name_project, description, id_agency, github
+            name_project, description, id_agency
          });
 
          return res.json(project);

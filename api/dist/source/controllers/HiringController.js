@@ -37,10 +37,10 @@ class HiringController {
     }
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { id_dev, id_agency, date_hiring, position } = req.body;
+            const { id_dev, id_agency, date_hiring } = req.body;
             try {
                 const hiring = yield Hiring_1.default.create({
-                    id_agency, id_dev, date_hiring, position
+                    id_agency, id_dev, date_hiring
                 });
                 return res.json(hiring);
             }

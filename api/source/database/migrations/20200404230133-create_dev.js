@@ -14,19 +14,15 @@ module.exports = {
        },
        born_in: {
          type: Sequelize.DATEONLY,
-         allowNull: false,
+         allowNull: false
        },
        skill: {
          type: Sequelize.STRING,
          allowNull: false
        },
-       github: {
-        type: Sequelize.STRING,
-        allowNull: false,
-        validate: {
-          isUrl: true
-        }
-        
+       position: {
+         type: Sequelize.STRING,
+         allowNull: false
        }
     });
     
