@@ -8,7 +8,7 @@ export default function GitHubLink({ iconSize, fontSize }) {
      <Container>
           <FaGithub size={iconSize} color="#000" />
           <Link size={fontSize}>
-               <a href="">
+               <a href="https://github.com/stoneparker" target="_blank">
                     https://github.com/stoneparker
                </a>
           </Link>
