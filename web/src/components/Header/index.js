@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiSearch } from 'react-icons/fi';
 
 import { StyledLink } from '../StyledLink';
@@ -13,6 +13,10 @@ export default function Header({ page }) {
      function handleMenuMobile() {
           setMenu(menu === 'none' ? 'inline': 'none');
      }
+
+     useEffect(() => {
+          setMenu('none')
+     }, [])
 
      return (
           <Container menuMobile={menu}>
@@ -40,18 +44,29 @@ export default function Header({ page }) {
                <MenuMobile display={menu}>
                          <FiAlignRightStyled size={35} color="#555" onClick={handleMenuMobile} />
                          <ul>
-                              <Session inMobile={page === "projects" ? 'true' : 'false'}>
-                                   <StyledLinkMobile to="projects">Projetos</StyledLinkMobile>
-                              </Session>
-                              <Session inMobile={page === "solicitations" ? 'true' : 'false'}>
-                                   <StyledLinkMobile to="solicitations">Solicitações</StyledLinkMobile>
-                              </Session>
-                              <Session inMobile={page === "profile" ? 'true' : 'false'}>
-                                   <StyledLinkMobile to="profile">Minha empresa</StyledLinkMobile>
-                              </Session>
-                              <Session inMobile={page === "search" ? 'true' : 'false'}>
-                                   <StyledLinkMobile to="search">Pesquisa</StyledLinkMobile>
-                              </Session>
+                              <StyledLinkMobile to="projects">
+                                   <Session inMobile={page === "projects" ? 'true' : 'false'}>
+                                        Projetos
+                                   </Session>
+                              </StyledLinkMobile>
+
+                              <StyledLinkMobile to="solicitations">
+                                   <Session inMobile={page === "solicitations" ? 'true' : 'false'}>
+                                        Solicitações
+                                   </Session>
+                              </StyledLinkMobile>
+
+                              <StyledLinkMobile to="profile">
+                                   <Session inMobile={page === "profile" ? 'true' : 'false'}>
+                                        Minha empresa
+                                   </Session>
+                              </StyledLinkMobile>
+
+                              <StyledLinkMobile to="search">
+                                   <Session inMobile={page === "search" ? 'true' : 'false'}>
+                                        Pesquisa
+                                   </Session>
+                              </StyledLinkMobile>
                          </ul>
                     </MenuMobile>
           </Container>
