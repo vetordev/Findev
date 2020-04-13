@@ -7,6 +7,7 @@ import GitHubLink from '../../components/GitHubLink';
 import { Container, Content, Agency, Projects, Devs, TitleSession, AddButton, HeaderSession } from './styles';
 
 import img_agency from '../../assets/rocketseat-logo.png';
+const perfil = 'https://api.adorable.io/avatars/285/abott@adorable.png';
 
 export default function Profile() {
   return (
@@ -68,10 +69,60 @@ export default function Profile() {
                   <FiTrash2 size={24} color="#CFCFCF" />
                 </div>
               </li>
+
+              <li>
+                <div className="content">
+                  <h3>Bootcamp GoStack</h3>
+                  <p className="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry, has been the industry's standard dummy text ever since the 1500s.</p>
+                  <GitHubLink iconSize={20} fontSize={16} />
+                </div>
+                <div className="icons">
+                  <FiEdit size={24} color="#CFCFCF" />
+                  <FiTrash2 size={24} color="#CFCFCF" />
+                </div>
+              </li>
             </ul>
           </Projects>
 
-          <Devs></Devs>
+          <Devs>
+            <HeaderSession>
+              <TitleSession>Desenvolvedores</TitleSession>
+              <AddButton>
+                <FiPlus size={28} color="#fff" />
+              </AddButton>
+            </HeaderSession>
+
+            <ul>
+              <li>
+                <img src={perfil} alt=""/>
+              </li>
+              <li>
+                <img src={perfil} alt=""/>
+              </li>
+              <li>
+                <img src={perfil} alt=""/>
+              </li>
+              <li>
+                <img src={perfil} alt=""/>
+              </li>
+              <li>
+                <img src={perfil} alt=""/>
+              </li>
+              <li>
+                <img src={perfil} alt=""/>
+              </li>
+              <li>
+                <img src={perfil} alt=""/>
+              </li>
+              <li>
+                <img src={perfil} alt=""/>
+              </li>
+              <li>
+                <img src={perfil} alt=""/>
+              </li>
+              
+            </ul>
+          </Devs>
         </Content>
       </Container>
     </>

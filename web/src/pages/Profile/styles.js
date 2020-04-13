@@ -25,7 +25,6 @@ export const Agency = styled.div`
      display: flex;
      flex-direction: row;
      align-items: center;
-     margin-bottom: 50px;
 
      img {
           width: 120px;
@@ -93,6 +92,7 @@ export const HeaderSession = styled.div`
      flex-direction: row;
 
      margin-bottom: 20px;
+     margin-top: 50px;
 `;
 
 export const Projects = styled.div`
@@ -134,4 +134,17 @@ export const Projects = styled.div`
      }
 `;
 
-export const Devs = styled.div``;
+export const Devs = styled.div`
+     ul {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, min(80px));
+          grid-gap: 8px;
+     }
+
+     ul li img {
+          cursor: pointer;
+          width: 80px;
+          border-radius: 6px;
+          box-shadow: -2px 3px 6px 0 rgba(0, 0, 0, 0.16);
+     }
+`;
