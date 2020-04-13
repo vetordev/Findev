@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
      -webkit-touch-callout: none;
@@ -42,16 +41,6 @@ export const Session = styled.li`
      font-size: 20px;
 
      border-bottom: ${props => props.in === 'true' ? '3px solid #222' : 'none' }
-`;
-
-
-export const StyledLink = styled(Link)`
-     text-decoration: none;
-
-     :focus, :hover, :visited, :link, :active {
-          text-decoration: none;
-          color: #222;
-     }
 `;
 
 export const MenuMobile = styled.div`

@@ -1,7 +1,9 @@
 import React from 'react';
 import { FiSearch, FiAlignRight } from 'react-icons/fi';
 
-import { Container, Session, StyledLink, MenuFullScreen, Logo, MenuMobile } from './styles';
+import { StyledLink } from '../StyledLink';
+
+import { Container, Session, MenuFullScreen, Logo, MenuMobile } from './styles';
 
 import logo from '../../assets/logos/black-logo64.png';
 
