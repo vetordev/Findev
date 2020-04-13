@@ -1,13 +1,18 @@
 import React from 'react';
 
 import Header from '../../components/Header';
+import SolicitationCard from '../../components/SolicitationCard';
 
-import { Container } from './styles';
+import { Container, Content } from './styles';
 
 export default function Solicitations() {
   return (
-    <Container>
+    <>
       <Header page="solicitations" />
-    </Container>
+      <Container>
+        <Content>
+        </Content>    
+      </Container>
+    </>
   );
 }

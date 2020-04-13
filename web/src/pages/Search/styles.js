@@ -5,11 +5,7 @@ export const Container = styled.div`
      justify-content: center;
      align-items: center;
      flex-direction: column;
-     padding: 0 300px 50px 300px;
-
-     @media (max-width: 1600px) {
-          padding: 0 150px;
-     }
+     padding: 0 200px 50px;
 
      @media (max-width: 1300px) {
           padding: 0 75px;
@@ -21,22 +17,6 @@ export const Container = styled.div`
 
      @media (max-width: 1060px) {
           padding: 0;
-     }
-`;
-
-export const Content = styled.div`
-     width: 100%;
-     height: auto;
-     background: #fff;
-     padding: 60px;
-     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
-
-     @media (max-width: 460px) {
-          padding: 20px 10px;
-     }
-
-     @media (max-width: 360px) {
-          padding: 20px 0;
      }
 `;
 

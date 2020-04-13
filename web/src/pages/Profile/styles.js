@@ -23,6 +23,12 @@ export const Logout = styled.button`
      border-radius: 8px;
      width: 50px;
      height: 50px;
+
+     @media (max-width: 480px) {
+          position: absolute;
+          right: 0;
+          margin-right: 15px;
+     }
 `;
 
 export const Content = styled.div`

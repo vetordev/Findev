@@ -4,8 +4,9 @@ import { FiPlus, FiTrash2, FiEdit, FiPower } from 'react-icons/fi';
 import Header from '../../components/Header';
 import GitHubLink from '../../components/GitHubLink';
 import { StyledLink } from '../../components/StyledLink';
+import { Content } from '../../components/Content';
 
-import { Container, Content, Agency, Projects, Devs, TitleSession, AddButton, HeaderSession, Logout } from './styles';
+import { Container, Agency, Projects, Devs, TitleSession, AddButton, HeaderSession, Logout } from './styles';
 
 import img_agency from '../../assets/rocketseat-logo.png';
 const perfil = 'https://api.adorable.io/avatars/285/abott@adorable.png';
@@ -15,7 +16,7 @@ export default function Profile() {
     <>
       <Header page="profile" />
       <Container>
-        <Content>
+        <Content width="auto">
           <Logout>
             <StyledLink to="/"><FiPower size={20} color="#000" /></StyledLink>
           </Logout>
