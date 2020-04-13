@@ -110,6 +110,10 @@ export const Projects = styled.div`
           padding: 20px 30px;
      }
 
+     ul li div.content {
+          margin-right: 10px;
+     }
+
      ul li div.content h3 {
           font-size: 18px;
           margin-bottom: 12px;
@@ -119,13 +123,14 @@ export const Projects = styled.div`
           color: rgba(0, 0, 0, 0.45);
           line-height: 20px;
           font-size: 15px;
+          margin-bottom: 15px;
      }
 
      ul li div.icons {
           display: flex;
           justify-content: space-between;
           flex-direction: column;
-          padding: 30px 0;
+          padding: 50px 0;
      }
 `;
 

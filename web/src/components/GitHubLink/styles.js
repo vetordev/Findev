@@ -6,7 +6,7 @@ export const Container = styled.div`
      align-items: center;
 `;
 
-export const LinkI = styled.span`
+export const Link = styled.span`
      @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,400&display=swap');
 
      font-family: 'Lato', sans-serif;
@@ -14,4 +14,8 @@ export const LinkI = styled.span`
      color: rgba(0, 0, 0, 0.59);
      margin-left: 7px;
      font-size: ${props => props.size}px;
+
+     a {
+          text-decoration: none;
+     }
 `;

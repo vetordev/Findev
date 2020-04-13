@@ -40,8 +40,8 @@ export default function Profile() {
                   <GitHubLink iconSize={20} fontSize={16} />
                 </div>
                 <div className="icons">
-                  <FiEdit size={24} color="rgba(0, 0, 0, 0.45)" />
-                  <FiTrash2 size={24} color="rgba(0, 0, 0, 0.45)" />
+                  <FiEdit size={24} color="#CFCFCF" />
+                  <FiTrash2 size={24} color="#CFCFCF" />
                 </div>
               </li>
 
@@ -49,10 +49,11 @@ export default function Profile() {
                 <div className="content">
                   <h3>Bootcamp GoStack</h3>
                   <p className="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry, has been the industry's standard dummy text ever since the 1500s.</p>
+                  <GitHubLink iconSize={20} fontSize={16} />
                 </div>
                 <div className="icons">
-                  <FiEdit size={24} color="rgba(0, 0, 0, 0.45)" />
-                  <FiTrash2 size={24} color="rgba(0, 0, 0, 0.45)" />
+                  <FiEdit size={24} color="#CFCFCF" />
+                  <FiTrash2 size={24} color="#CFCFCF" />
                 </div>
               </li>
 
@@ -60,10 +61,11 @@ export default function Profile() {
                 <div className="content">
                   <h3>Bootcamp GoStack</h3>
                   <p className="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry, has been the industry's standard dummy text ever since the 1500s.</p>
+                  <GitHubLink iconSize={20} fontSize={16} />
                 </div>
                 <div className="icons">
-                  <FiEdit size={24} color="rgba(0, 0, 0, 0.45)" />
-                  <FiTrash2 size={24} color="rgba(0, 0, 0, 0.45)" />
+                  <FiEdit size={24} color="#CFCFCF" />
+                  <FiTrash2 size={24} color="#CFCFCF" />
                 </div>
               </li>
             </ul>
