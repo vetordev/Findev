@@ -14,7 +14,8 @@ describe('Agency', () => {
 
    it ('Deve criar uma agência', async () => {
       const agency: IAgency = {
-         name_agency: 'DevelopersBest'
+         name_agency: 'DevelopersBest',
+         email: 'vitor13m2003@gmail.com'
       }
 
       const response = await request(server.app)

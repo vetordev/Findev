@@ -26,11 +26,11 @@ class HiringController implements IController {
    }
    async create(req: Request, res: Response): Promise<Response> {
 
-      const { id_dev, id_agency, date_hiring } = req.body;
+      const { id_dev, id_agency, date_hiring, position } = req.body;
 
       try {
          const hiring = await Hiring.create({
-            id_agency, id_dev, date_hiring
+            id_agency, id_dev, date_hiring, position
          });
          return res.json(hiring);
       } catch (err) {

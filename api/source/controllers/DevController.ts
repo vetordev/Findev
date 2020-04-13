@@ -17,11 +17,11 @@ class DevController implements IController {
       
    }
    async create(req: Request, res: Response): Promise<Response> {
-      const { name_dev, born_in, position, skill } = req.body;
+      const { name_dev, born_in, skill, github } = req.body;
       
       try {
          const dev = await Developer.create({
-            name_dev, born_in, position, skill
+            name_dev, born_in, skill, github
          });
 
          return res.json(dev);

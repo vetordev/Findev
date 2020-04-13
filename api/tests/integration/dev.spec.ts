@@ -16,8 +16,8 @@ describe('Dev', () => {
       const developer: IDeveloper = {
          name_dev: 'Carlos',
          born_in: '2000-04-05',
-         position: 'Senior',
-         skill: 'frontend'
+         skill: 'frontend',
+         github: 'http://github.com/vetordev'
       }
 
       const response = await request(server.app)

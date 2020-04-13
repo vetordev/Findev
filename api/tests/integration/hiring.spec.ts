@@ -18,7 +18,8 @@ describe('Hiring', () => {
       const hiring: IHiring = {
          id_dev: 1,
          id_agency: 1,
-         date_hiring: '2020-04-04'
+         date_hiring: '2020-04-04',
+         position: 'Back-end'
       }
       
       const response = await request(server.app)

@@ -8,7 +8,8 @@ describe('Project', () => {
       const project: IProject = {
          name_project: 'Space Dogs',
          description: 'Projeto para adoção de cachorros',
-         id_agency: 2
+         id_agency: 2,
+         github: 'https://github.com/vetordev/Findev'
       };
 
       const response = await request(server.app)
