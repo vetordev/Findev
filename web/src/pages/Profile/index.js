@@ -1,11 +1,11 @@
 import React from 'react';
-import { FiPlus, FiTrash2, FiEdit } from 'react-icons/fi';
+import { FiPlus, FiTrash2, FiEdit, FiPower } from 'react-icons/fi';
 
 import Header from '../../components/Header';
 import GitHubLink from '../../components/GitHubLink';
 import { StyledLink } from '../../components/StyledLink';
 
-import { Container, Content, Agency, Projects, Devs, TitleSession, AddButton, HeaderSession } from './styles';
+import { Container, Content, Agency, Projects, Devs, TitleSession, AddButton, HeaderSession, Logout } from './styles';
 
 import img_agency from '../../assets/rocketseat-logo.png';
 const perfil = 'https://api.adorable.io/avatars/285/abott@adorable.png';
@@ -16,9 +16,11 @@ export default function Profile() {
       <Header page="profile" />
       <Container>
         <Content>
+          <Logout>
+            <FiPower size={20} />
+          </Logout>
           <Agency>
             <img src={img_agency} alt=""/>
-
             <div id="infos-agency">
               <h2>Rocketseat</h2>
               <p><span>E-mail: </span>oi@rocketseat.com.br</p>

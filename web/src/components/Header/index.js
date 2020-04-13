@@ -7,16 +7,23 @@ import { Container, Session, MenuFullScreen, Logo, MenuMobile, FiAlignRightStyle
 
 import logo from '../../assets/logos/black-logo64.png';
 
+// const windowSize = window.innerWidth;
+
 export default function Header({ page }) {
      const [menu, setMenu] = useState('inline');
+
 
      function handleMenuMobile() {
           setMenu(menu === 'none' ? 'inline': 'none');
      }
 
      useEffect(() => {
-          setMenu('none')
+          setMenu('none');
      }, [])
+
+     // useEffect(() => { 
+     //      alert('aaaa')
+     // }, window.innerWidth)
 
      return (
           <Container menuMobile={menu}>

@@ -11,6 +11,20 @@ export const Container = styled.div`
      }
 `;
 
+export const Logout = styled.button`
+     cursor: pointer;
+     
+     position: relative;
+     float: right;
+     
+     border: 0;
+     background: #86DFE9;
+     opacity: 0.24;
+     border-radius: 8px;
+     width: 50px;
+     height: 50px;
+`;
+
 export const Content = styled.div`
      /* width: 100%; */
      height: auto;
