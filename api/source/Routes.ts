@@ -27,6 +27,12 @@ class Routes implements IRoutes {
          })
       }),devController.show);
 
+      this.app.get('/dev/:name_dev', celebrate({
+         [Segments.PARAMS]: Joi.object().keys({
+            name_dev: Joi.string().required()
+         })
+      }), devController.findByName);
+
       this.app.post('/dev', celebrate({
          [Segments.BODY]: Joi.object().keys({
             name_dev: Joi.string().required(),

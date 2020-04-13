@@ -47,6 +47,14 @@ describe('Dev', () => {
       expect(response.body).toHaveProperty('id_dev');
       expect(response.body).toHaveProperty('Agencies');
       
+   });
+
+   it('Deve retornar desenvolvedores que se encaixem na condição do like', async () => {
+      const response = await request(server.app)
+         .get('/dev/4')
+         .send();
+
+      expect(response.status).toBe(200);
    })
 
    

@@ -22,6 +22,7 @@
     "sqlite3": "^4.1.1"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/bluebird": "^3.5.30",
     "@types/cors": "^2.8.6",
     "@types/dotenv": "^8.2.0",
@@ -33,6 +34,7 @@
     "@types/socket.io": "^2.1.4",
     "@types/supertest": "^2.0.8",
     "@types/validator": "^12.0.1",
+    "axios": "^0.19.2",
     "cross-env": "^7.0.2",
     "jest": "^25.2.4",
     "nodemon": "^2.0.2",
