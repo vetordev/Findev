@@ -33,6 +33,10 @@ export const Logo = styled.img`
      position: absolute;
      left: 0;
      top: 0;
+
+     @media (max-width: 400px) {
+          margin: 20px 0 0 20px;
+     }
 `;
 
 export const MenuFullScreen = styled.ul`
