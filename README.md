@@ -7,6 +7,7 @@ Plataforma digital construída com o propósito de facilitar as relações de ne
 
 ## :computer: Desenvolvimento 
 A plataforma conta com dois sistemas que conversam entre sí, o `WEB` e `MOBILE` (ambos descrito abaixo) e consomem de uma `API` em comum.  
+
 `WEB` - Escrito em Javascript e com React JS ...  
 `MOBILE` - Escrito com Javascript com React Native ...  
 `API` - Escrito em Typescript juntamente ao Node.js com as libs:
