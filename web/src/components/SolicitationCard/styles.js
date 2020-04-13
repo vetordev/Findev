@@ -1,18 +1,14 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-
+export const CardsContainer = styled.div`
      font-size: 10px;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(320px, 2fr));
+     grid-gap: 30px;
+`;
 
-     ul {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-          grid-gap: 35px;
-     }
-
-     li {
+export const Card = styled.div`
           display: flex;
-          flex-grow: 0;
           justify-content: center;
           background: #fff;
           height: auto;
@@ -22,23 +18,22 @@ export const Container = styled.div`
 
           display: flex;
           align-items: center;
-     }
-
-     li div.img img {
+          
+     div.img img {
           width: 90px;
           margin-right: 20px;
           border-radius: 6px;
           box-shadow: -2px 3px 10px 0 rgba(0, 0, 0, 0.16);
      }
 
-     li div.content p.devName {
+     div.content p.devName {
           font-weight: bold;
           margin-bottom: 5px;
           font-size: 2em;
           color: rgba(0, 0, 0, 0.7);
      }
 
-     li div.content div {
+     div.content div {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -47,12 +42,14 @@ export const Container = styled.div`
      }
 
      @media (max-width: 360px) {
-          li div.content p.devName {
+          padding: 15px 0px;
+          
+          div.content p.devName {
                font-size: 1.7em;
                text-align: center; 
           }
 
-          li div.img img {
+          div.img img {
                width: 80px;
                margin-right: 10px;
           }

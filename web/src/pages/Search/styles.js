@@ -22,7 +22,7 @@ export const Container = styled.div`
 
 export const SearchBar = styled.div`
      background: #fff;
-     width: 100%;
+     width: 90%;
      margin: 0 40px 30px 40px;
      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
      border-radius: 8px;

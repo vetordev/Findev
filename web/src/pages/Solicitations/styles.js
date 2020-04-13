@@ -37,12 +37,11 @@ export const Sessions = styled.div`
 
      div#active {
           background: #000;
-          /* margin-right: 100px; */
           color: #fff;
      }
 
      div#disabled {
-          background: rgba(0, 0, 0, 0.2);
+          background: rgba(0, 0, 0, 0.1);
           color: rgba(255, 255, 255, 0.6);
      }
 `;
