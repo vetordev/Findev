@@ -38,7 +38,7 @@ export default function Profile() {
                 <div className="content">
                   <h3>Bootcamp GoStack</h3>
                   <p className="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry, has been the industry's standard dummy text ever since the 1500s.</p>
-                  <GitHubLink iconSize={20} fontSize={16} />
+                  <GitHubLink iconSize={20} fontSize={16} link="https://github.com/stoneparker" />
                 </div>
                 <div className="icons">
                   <FiEdit size={24} color="#CFCFCF" />
