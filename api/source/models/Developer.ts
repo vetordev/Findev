@@ -6,6 +6,7 @@ class Developer extends Model {
    public born_in !: string;
    public skill !: string;
    public github !: string;
+   public avatar_uri !: string;
 
    static start(sequelize: Sequelize){
       this.init({
@@ -35,7 +36,14 @@ class Developer extends Model {
             validate: {
                isUrl: true
             }
-         }
+         },
+         avatar_uri: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+               isUrl: true
+            }
+         },
       }, {
          sequelize,
          modelName: 'developer',
