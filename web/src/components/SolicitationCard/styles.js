@@ -5,6 +5,10 @@ export const CardsContainer = styled.div`
      display: grid;
      grid-template-columns: repeat(auto-fit, minmax(320px, 2fr));
      grid-gap: 30px;
+
+     @media (max-width: 360px) {
+          grid-template-columns: repeat(auto-fit, minmax(280px, 2fr));
+     }
 `;
 
 export const Card = styled.div`
@@ -29,7 +33,7 @@ export const Card = styled.div`
      div.content p.devName {
           font-weight: bold;
           margin-bottom: 5px;
-          font-size: 2em;
+          font-size: 18px;
           color: rgba(0, 0, 0, 0.7);
      }
 

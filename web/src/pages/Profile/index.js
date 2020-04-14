@@ -1,12 +1,12 @@
 import React from 'react';
-import { FiPlus, FiTrash2, FiEdit, FiPower } from 'react-icons/fi';
+import { FiPlus, FiPower } from 'react-icons/fi';
 
 import Header from '../../components/Header';
 import GitHubLink from '../../components/GitHubLink';
 import { StyledLink } from '../../components/StyledLink';
 import { Content } from '../../components/Content';
 
-import { Container, Agency, Projects, Devs, TitleSession, AddButton, HeaderSession, Logout } from './styles';
+import { FiTrash2Styled, FiEditStyled, Container, Agency, Projects, Devs, TitleSession, AddButton, HeaderSession, Logout } from './styles';
 
 import img_agency from '../../assets/rocketseat-logo.png';
 const perfil = 'https://api.adorable.io/avatars/285/abott@adorable.png';
@@ -45,8 +45,8 @@ export default function Profile() {
                   <GitHubLink iconSize={20} fontSize={16} link="https://github.com/stoneparker"/>
                 </div>
                 <div className="icons">
-                  <FiEdit size={24} color="#CFCFCF" />
-                  <FiTrash2 size={24} color="#CFCFCF" />
+                  <FiEditStyled size={24} color="#CFCFCF" />
+                  <FiTrash2Styled size={24} color="#CFCFCF" />
                 </div>
               </li>
 
@@ -57,8 +57,8 @@ export default function Profile() {
                   <GitHubLink iconSize={20} fontSize={16} link="https://github.com/stoneparker"/>
                 </div>
                 <div className="icons">
-                  <FiEdit size={24} color="#CFCFCF" />
-                  <FiTrash2 size={24} color="#CFCFCF" />
+                  <FiEditStyled size={24} color="#CFCFCF" />
+                  <FiTrash2Styled size={24} color="#CFCFCF" />
                 </div>
               </li>
 
@@ -69,8 +69,8 @@ export default function Profile() {
                   <GitHubLink iconSize={20} fontSize={16} link="https://github.com/stoneparker"/>
                 </div>
                 <div className="icons">
-                  <FiEdit size={24} color="#CFCFCF" />
-                  <FiTrash2 size={24} color="#CFCFCF" />
+                  <FiEditStyled size={24} color="#CFCFCF" />
+                  <FiTrash2Styled size={24} color="#CFCFCF" />
                 </div>
               </li>
 
@@ -81,8 +81,8 @@ export default function Profile() {
                   <GitHubLink iconSize={20} fontSize={16} link="https://github.com/stoneparker"/>
                 </div>
                 <div className="icons">
-                  <FiEdit size={24} color="#CFCFCF" />
-                  <FiTrash2 size={24} color="#CFCFCF" />
+                  <FiEditStyled size={24} color="#CFCFCF" />
+                  <FiTrash2Styled size={24} color="#CFCFCF" />
                 </div>
               </li>
             </ul>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { FiTrash2, FiEdit } from 'react-icons/fi';
 
 export const Container = styled.div`
      display: flex;
@@ -24,10 +25,14 @@ export const Logout = styled.button`
      width: 50px;
      height: 50px;
 
+     @media (max-width: 1069px) {
+          margin-right: 15px;
+     }
+
      @media (max-width: 480px) {
           position: absolute;
           right: 0;
-          margin-right: 15px;
+          /* margin-right: 15px; */
      }
 `;
 
@@ -53,7 +58,7 @@ export const Agency = styled.div`
      img {
           width: 120px;
           border-radius: 6px;
-          margin-right: 20px;
+          margin: 0 20px 0 10px;
      }
 
      div#infos-agency h2 {
@@ -87,8 +92,8 @@ export const Agency = styled.div`
           }
 
           img {
-               margin-right: 0;
-               margin-bottom: 20px;
+               margin: 0 0 20px 0;
+               /* margin-bottom: 20px; */
           }
      }
 `;
@@ -121,13 +126,17 @@ export const HeaderSession = styled.div`
      margin-bottom: 20px;
      margin-top: 50px;
      max-width: 100%;
+
+     @media (max-width: 1064px) {
+          margin-left: 20px;
+     }
 `;
 
 export const Projects = styled.div`
 
      ul {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
           grid-gap: 30px;
      }
 
@@ -142,6 +151,9 @@ export const Projects = styled.div`
 
      ul li div.content {
           margin-right: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center
      }
 
      ul li div.content h3 {
@@ -164,6 +176,14 @@ export const Projects = styled.div`
      }
 `;
 
+export const FiTrash2Styled = styled(FiTrash2)`
+     margin: 5px 0;
+`;
+
+export const FiEditStyled = styled(FiEdit)`
+     margin: 5px 0;
+`;
+
 export const Devs = styled.div`
 
      ul {
@@ -177,5 +197,12 @@ export const Devs = styled.div`
           width: 80px;
           border-radius: 6px;
           box-shadow: -2px 3px 6px 0 rgba(0, 0, 0, 0.16);
+     }
+
+     @media (max-width: 1064px) {
+          ul {
+               justify-content: center;
+               align-items: center;
+          }
      }
 `;
