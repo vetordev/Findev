@@ -3,12 +3,24 @@ import { FiSearch } from 'react-icons/fi';
 
 import Header from '../../components/Header';
 import SolicitationCard from '../../components/SolicitationCard';
-import { CardsContainer } from '../../components/SolicitationCard/styles';
 import { Content } from '../../components/Content';
 
 import { Container, SearchBar } from './styles';
 
 export default function Search() {
+
+  const array = {
+    data: [
+      "All",
+      "Health",
+      "Business",
+      "Entertainment",
+      "Sports",
+      "Technology",
+      "Science",
+    ]
+  }
+
   return (
       <>
         <Header page="search" />
@@ -20,11 +32,7 @@ export default function Search() {
             </div>
           </SearchBar>
           <Content width='90%'>
-            <CardsContainer>
-              <SolicitationCard />
-              <SolicitationCard />
-              <SolicitationCard />
-            </CardsContainer>
+              <SolicitationCard messageBtn1="Enviar solicitação" array={array} />
           </Content>
         </Container>
       </>

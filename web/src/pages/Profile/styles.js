@@ -177,11 +177,13 @@ export const Projects = styled.div`
 `;
 
 export const FiTrash2Styled = styled(FiTrash2)`
-     margin: 5px 0;
+     cursor: pointer;
+     margin: 6px 0;
 `;
 
 export const FiEditStyled = styled(FiEdit)`
-     margin: 5px 0;
+     cursor: pointer;
+     margin: 6px 0;
 `;
 
 export const Devs = styled.div`

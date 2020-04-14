@@ -1,11 +1,16 @@
 import React from 'react';
 
-import { DevSkills, Button, Card } from './styles';
+import { DevSkills, Button, Card, CardsContainer } from './styles';
+import CardDevDetails from '../CardDevDetails';
 
 const perfil = 'https://api.adorable.io/avatars/285/abott@adorable.png';
 
-export default function SolicitationCard() {
+export default function SolicitationCard({ messageBtn1, messageBtn2, array }) {
   return (
+     <>
+     {/* <CardDevDetails /> */}
+     <CardsContainer>
+          {array.data.map( ngc =>
           <Card>
                <div className="img">
                     <img src={perfil} alt=""/>
@@ -19,11 +24,15 @@ export default function SolicitationCard() {
                     </DevSkills>
 
                     <div>
+                         {/* { messageBtn2 ? <Button>{messageBtn2}</Button> : '' }     */}
                          <Button>
-                              Enviar Solicitação
+                              {messageBtn1}
                          </Button>
                     </div>
                </div>
           </Card>
+          )}
+     </CardsContainer>
+     </>
   );
 }

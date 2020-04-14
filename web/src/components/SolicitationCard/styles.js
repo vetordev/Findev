@@ -24,6 +24,7 @@ export const Card = styled.div`
           align-items: center;
           
      div.img img {
+          cursor: pointer;
           width: 90px;
           margin-right: 20px;
           border-radius: 6px;
@@ -31,6 +32,7 @@ export const Card = styled.div`
      }
 
      div.content p.devName {
+          cursor: pointer;
           font-weight: bold;
           margin-bottom: 5px;
           font-size: 18px;
@@ -61,6 +63,7 @@ export const Card = styled.div`
 `;
 
 export const DevSkills = styled.div`
+     cursor: pointer;
      display: flex;
      /* font-weight: bold; */
      margin-bottom: 15px;
@@ -88,7 +91,8 @@ export const Button = styled.button`
      cursor: pointer;
      width: 90%;
      height: 35px;
-     border: 2px solid #86DFE9;
+     border: 2px solid;
+     border-color:  #86DFE9;
      background: transparent;
      border-radius: 12px;
 
