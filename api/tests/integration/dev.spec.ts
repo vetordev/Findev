@@ -16,8 +16,8 @@ describe('Dev', () => {
       const developer: IDeveloper = {
          name_dev: 'Carlos',
          born_in: '2000-04-05',
-         position: 'Senior',
-         skill: 'frontend'
+         skill: 'frontend',
+         github: 'http://github.com/vetordev'
       }
 
       const response = await request(server.app)
@@ -47,6 +47,14 @@ describe('Dev', () => {
       expect(response.body).toHaveProperty('id_dev');
       expect(response.body).toHaveProperty('Agencies');
       
+   });
+
+   it('Deve retornar desenvolvedores que se encaixem na condição do like', async () => {
+      const response = await request(server.app)
+         .get('/dev/4')
+         .send();
+
+      expect(response.status).toBe(200);
    })
 
    

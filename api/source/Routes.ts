@@ -18,6 +18,7 @@ class Routes implements IRoutes {
    applyRoutes(){
 
       /*DEV*/
+      
       this.app.get('/dev', devController.index);   
 
       this.app.get('/dev/:id_dev/hiring', celebrate({
@@ -26,12 +27,19 @@ class Routes implements IRoutes {
          })
       }),devController.show);
 
+      this.app.get('/dev/:name_dev', celebrate({
+         [Segments.PARAMS]: Joi.object().keys({
+            name_dev: Joi.string().required()
+         })
+      }), devController.findByName);
+
       this.app.post('/dev', celebrate({
          [Segments.BODY]: Joi.object().keys({
             name_dev: Joi.string().required(),
             born_in: Joi.date().required(),
-            position: Joi.string().required(),
-            skill: Joi.string().required()
+            skill: Joi.string().required(),
+            github: Joi.string().uri().required()
+
          })
       }), devController.create);
 
@@ -45,13 +53,14 @@ class Routes implements IRoutes {
 
       this.app.post('/agency', celebrate({
          [Segments.BODY]: Joi.object().keys({
-            name_agency: Joi.string().required()
+            name_agency: Joi.string().required(),
+            email: Joi.string().required()
          })
       }), agencyController.create);
 
       this.app.get('/agency/:id_agency/project', celebrate({
          [Segments.PARAMS]: Joi.object().keys({
-            id_agency: Joi.number().integer().required()
+            id_agency: Joi.number().integer().required(),
          })
       }), agencyController.showProjects);
 
@@ -61,7 +70,8 @@ class Routes implements IRoutes {
          [Segments.BODY]: Joi.object().keys({
             id_dev: Joi.number().integer().required(),
             id_agency: Joi.number().integer().required(),
-            date_hiring: Joi.date().required()
+            position: Joi.string().required(),
+            date_hiring: Joi.date().required(),
          })
       }), hiringController.create);
 
@@ -72,11 +82,13 @@ class Routes implements IRoutes {
             id_project: Joi.number().integer().required()
          })
       }),projectController.show);
+
       this.app.post('/project', celebrate({
          [Segments.BODY]: Joi.object().keys({
             name_project: Joi.string().required(),
             description: Joi.string().required(),
             id_agency: Joi.number().integer().required(),
+            github: Joi.string().uri().required()
          })
       }), projectController.create);
    

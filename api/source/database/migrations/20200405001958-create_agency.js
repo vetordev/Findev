@@ -12,6 +12,10 @@ module.exports = {
         name_agency: {
           type: Sequelize.STRING,
           allowNull: false
+        },
+        email: {
+          type: Sequelize.STRING,
+          allowNull: false
         }
       });
     

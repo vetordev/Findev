@@ -1,4 +1,5 @@
-import {Request, Response} from 'express'
+import {Request, Response} from 'express';
+import { Op } from "sequelize";
 import IController from '../config/Controller';
 import Developer from '../models/Developer';
 
@@ -17,11 +18,11 @@ class DevController implements IController {
       
    }
    async create(req: Request, res: Response): Promise<Response> {
-      const { name_dev, born_in, position, skill } = req.body;
+      const { name_dev, born_in, skill, github } = req.body;
       
       try {
          const dev = await Developer.create({
-            name_dev, born_in, position, skill
+            name_dev, born_in, skill, github
          });
 
          return res.json(dev);
@@ -50,7 +51,25 @@ class DevController implements IController {
          console.log(err);
          return res.status(500).json({ error: 'it was not possible to find the developer' });
       }
-      
+   }
+   async findByName(req: Request, res: Response): Promise<Response> {
+      const { name_dev } = req.params;
+
+      try {
+         const developers = await Developer.findAll({
+            where: {
+               name_dev: {
+                  [Op.like]: `${name_dev}%`
+               }
+            }
+         });   
+         return res.json(developers)
+      } catch (err) {
+         console.log(err)
+         return res.status(500).json({ error: 'it was not possible to find the developer' });
+      }
+
+
    }
    async update(req: Request, res: Response): Promise<Response> {
       return res.send();

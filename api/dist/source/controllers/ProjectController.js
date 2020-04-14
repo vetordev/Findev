@@ -33,10 +33,10 @@ class ProjectController {
     }
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { name_project, description, id_agency } = req.body;
+            const { name_project, description, id_agency, github } = req.body;
             try {
                 const project = yield Project_1.default.create({
-                    name_project, description, id_agency
+                    name_project, description, id_agency, github
                 });
                 return res.json(project);
             }
