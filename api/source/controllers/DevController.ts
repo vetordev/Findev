@@ -2,7 +2,6 @@ import {Request, Response} from 'express';
 import { Op } from "sequelize";
 import IController from '../config/Controller';
 import Developer from '../models/Developer';
-import getAvatarUri from '../utils/GetAvatarUri';
 
 class DevController implements IController {
    async index(req: Request, res: Response): Promise<Response> {
@@ -21,11 +20,9 @@ class DevController implements IController {
    async create(req: Request, res: Response): Promise<Response> {
       const { name_dev, born_in, skill, github } = req.body;
       
-      const avatar_uri = await getAvatarUri(github);
-
       try {
          const dev = await Developer.create({
-            name_dev, born_in, skill, github, avatar_uri
+            name_dev, born_in, skill, github
          });
 
          return res.json(dev);

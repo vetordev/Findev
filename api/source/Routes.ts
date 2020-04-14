@@ -18,6 +18,7 @@ class Routes implements IRoutes {
    applyRoutes(){
 
       /*DEV*/
+      
       this.app.get('/dev', devController.index);   
 
       this.app.get('/dev/:id_dev/hiring', celebrate({

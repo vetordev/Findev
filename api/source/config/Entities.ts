@@ -2,7 +2,7 @@ export interface IDeveloper {
    id_dev ?: number,
    name_dev : string,
    born_in : string,
-   avatar_uri ?: string,
+   picture ?: string,
    skill : string,
    github : string
 }

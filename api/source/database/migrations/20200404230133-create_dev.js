@@ -23,12 +23,11 @@ module.exports = {
        github: {
         type: Sequelize.STRING,
         allowNull: false,
-       },
-       avatar_uri: {
-        type: Sequelize.STRING,
-        allowNull: false
-       },
+        validate: {
+          isUrl: true
+        }
         
+       }
     });
     
   },
