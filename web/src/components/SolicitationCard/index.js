@@ -6,24 +6,24 @@ import CardDevDetails from '../CardDevDetails';
 const perfil = 'https://api.adorable.io/avatars/285/abott@adorable.png';
 
 export default function SolicitationCard({ messageBtn1, messageBtn2, array }) {
-     const [show, setShowCardDev] = useState('');
+     const [showCardDev, setShowCardDev] = useState('');
 
      function openCardDev() {
-          setShowCardDev(<CardDevDetails array={array} show={show} />);
+          setShowCardDev(<CardDevDetails array={array} show={showCardDev} />);
      }
 
      return (
      <>
-          {show}
+          {showCardDev}
           <CardsContainer>
                {array.data.map(dev =>
                     <Card  key={dev}>
-                         <div className="img">
+                         <div className="img" onClick={openCardDev}>
                               <img src={perfil} alt="" />
                          </div>
                          <div className="content">
                               <p className="devName" onClick={openCardDev}>Vitória Lopes Diogo</p>
-                              <DevSkills>
+                              <DevSkills onClick={openCardDev}>
                                    <p><span>#</span>Front-end</p>
                                    <p><span>#</span>ReactNative</p>
                                    <p><span>#</span>ReactJS</p>

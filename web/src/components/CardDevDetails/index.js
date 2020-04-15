@@ -13,12 +13,11 @@ export default function CardDevDetails({ show, array }) {
 
      function closeCardDev() {
           setCardDisplay('none');
-          // this.display = 'none';
      }
 
      useEffect(() => {
           setCardDisplay('flex')
-     }, [show])
+     }, [show]);
 
      return (
      <Container display={cardDisplay} onClick={closeCardDev}>

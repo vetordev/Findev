@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FiPlus, FiPower } from 'react-icons/fi';
 
 import Header from '../../components/Header';
 import GitHubLink from '../../components/GitHubLink';
 import { StyledLink } from '../../components/StyledLink';
 import { Content } from '../../components/Content';
+import CardDelete from '../../components/CardDelete';
 
 import { FiTrash2Styled, FiEditStyled, Container, Agency, Projects, Devs, TitleSession, AddButton, HeaderSession, Logout } from './styles';
 
@@ -12,8 +13,15 @@ import img_agency from '../../assets/rocketseat-logo.png';
 const perfil = 'https://api.adorable.io/avatars/285/abott@adorable.png';
 
 export default function Profile() {
+  const [showDeleteCard, setShowDeleteCard] = useState('');
+
+  function openDeleteCard() {
+      setShowDeleteCard(<CardDelete show={showDeleteCard} />);
+  }
   return (
     <>
+      {showDeleteCard}
+      {/* <CardDelete show={showDeleteCard} /> */}
       <Header page="profile" />
       <Container>
         <Content width="auto">
@@ -46,7 +54,7 @@ export default function Profile() {
                 </div>
                 <div className="icons">
                   <FiEditStyled size={24} color="#CFCFCF" />
-                  <FiTrash2Styled size={24} color="#CFCFCF" />
+                  <FiTrash2Styled size={24} color="#CFCFCF" onClick={openDeleteCard} />
                 </div>
               </li>
 
